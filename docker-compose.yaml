@@ -1,0 +1,9 @@
+services:
+  bunserver:
+    image: oven/bun:latest
+    build: .
+    container_name: bun-server
+    ports:
+      - "10000:10000"
+    volumes:
+      - ./src:/usr/src/app/src
