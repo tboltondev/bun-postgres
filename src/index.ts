@@ -1,8 +1,13 @@
 const server = Bun.serve({
     port: 10000,
     routes: {
-        "/hello/:name": (req) => new Response(`hello ${req.params.name}`),
+        "/api/users": {
+            POST: async req => {
+                const body = await req.json();
+                return Response.json({ body });
+            }
+        }
     }
 })
 
-console.log(`Server running on port: ${server.port}`)
+console.log(`Bun version: ${Bun.version}\nServer running on port: ${server.port}`)
