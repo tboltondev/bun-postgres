@@ -11,4 +11,3 @@ RUN bun install
 EXPOSE 10000
 
 CMD ["bun", "--hot", "src/index.ts"]
-#CMD ["ls", "-la"]
