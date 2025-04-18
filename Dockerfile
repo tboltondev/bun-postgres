@@ -4,6 +4,7 @@ WORKDIR /usr/app
 
 COPY package.json ./
 COPY bun.lockb ./
+COPY .env ./
 COPY src ./src
 
 RUN bun install
